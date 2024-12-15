@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tyson's To Do List</title>
+    <style>
+       
+        .button-container{
+            position: fixed;
+            border: 2px solid #aaa;
+            padding: 20px;
+            margin: 10px auto;
+            background-color: #f9f9f9;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function elementInsert(){
+         let userInput=document.getElementById("text1").value;
+         let newElement=document.createElement("li");
+         newElement.innerHTML = userInput;
+         let whereToInsert=document.getElementById("myOL");
+         whereToInsert.appendChild(newElement)
+         document.getElementById("text1").value = "";
+        }
+        function elementDelete(){
+            let userInput=document.getElementById("text2").value;
+            let index = parseInt(userInput)
+            let listItems = document.querySelectorAll("#myOL li");
+            listItems[index-1].remove();
+            document.getElementById("text2").value = "";
+       }
+       function elementMark(){
+            let userInput=document.getElementById("text3").value;
+            let index = parseInt(userInput)
+            let listItems = document.querySelectorAll("#myOL li");
+            listItems[index-1].style.color = "blue";
+            document.getElementById("text3").value = "";
+       }
+       function elementEdit(){
+            let userInput=document.getElementById("text4").value;
+            let index = parseInt(userInput)
+            let listItems = document.querySelectorAll("#myOL li");
+            let listItem = listItems[index-1];
+            let editInput = document.createElement("input");
+            editInput.type = "text";
+            editInput.value = listItem.textContent;
+
+            let saveButton = document.createElement("button");
+            saveButton.textContent = "Save";
+            saveButton.onclick = function() {
+                listItem.textContent = editInput.value;
+            };
+            listItem.appendChild(editInput);
+            listItem.appendChild(saveButton);
+
+            document.getElementById("text4").value = "";
+       }
+         
+     </script>
+</head>
+<body>
+   <h1>Tyson's To Do List</h1>
+   
+   <ol id ="myOL">
+     <li>Do the dishes</li>
+     <li>Clean the house</li>
+   </ol>
+  
+   <div class = "button-container">
+    
+   <input type="text" id="text1"/>
+   <button onclick="elementInsert()">Add Item to List</button>
+   <br/>
+   <br/>
+   <input type="text" id="text4"/>
+   <button onclick="elementEdit()">Edit Item by Index</button>
+   <br/>
+  <br/>
+   <input type="text" id="text3"/>
+   <button onclick="elementMark()">Mark Item Complete by Index </button>
+   <br/>
+   <br/>
+   <input type="text" id="text2"/>
+   <button onclick="elementDelete()">Delete Item by Index </button>
+   <br/>
+   
+   </div>
+</body>
+</html>
