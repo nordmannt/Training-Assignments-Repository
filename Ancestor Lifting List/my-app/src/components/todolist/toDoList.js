@@ -1,28 +1,28 @@
 import { useState } from "react";
-import ToAddList from './add.js';  // Corrected path for add.js
-import CountList from './listCount.js';  // For counting the list items
-import ShowList from './listshow.js';    // For displaying the list
+import ToAddList from './add.js';  
+import CountList from './listCount.js';  
+import ShowList from './listshow.js';    
 
 const ToDoList = () => {
-  const [list, setList] = useState([]);  // To manage the list of items
-  const [value, setValue] = useState("");  // To manage the input field value
+  const [list, setList] = useState([]);  
+  const [value, setValue] = useState(""); 
 
   const addItem = (newItem) => {
-    setList((prevList) => [...prevList, newItem]);  // Add new item to the list
+    setList((prevList) => [...prevList, newItem]);  
   };
 
   return (
     <div>
       
-      <ShowList list={list} />  {/* Pass the list to ShowList */}
+      <ShowList list={list} />  
 
       <ToAddList 
-        value={value}  // Pass the value of the input
-        setValue={setValue}  // Pass the setter function to update the value
-        addItem={addItem}  // Pass the addItem function to add to the list
+        value={value} 
+        setValue={setValue}  
+        addItem={addItem}  
       />
       
-      <CountList list={list} />  {/* Pass the list to CountList */}
+      <CountList list={list} />  
     </div>
   );
 }

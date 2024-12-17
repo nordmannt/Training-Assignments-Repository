@@ -21,14 +21,14 @@ const ListandKeysComponent = () => {
     ]);
 
     const handleDelete = (id) => {
-        setComments(comments.filter(comment => comment.id !== id));  // Use strict inequality (!==) for comparison
+        setComments(comments.filter(comment => comment.id !== id));  
     };
 
     const [name, setName] = useState("Jasdhir");
 
     useEffect(() => {
         console.log("useEffect called...");
-    }, []);  // Empty dependency array ensures this runs only on mount
+    }, []);  
 
     return (
         <>
