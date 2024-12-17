@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+/*.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+  */
+.navbar {
+  padding: 20px;
+  background-color: #99b9df;  
+  display: flex;
+  justify-content: left;  
+  align-items: left;
+}
+
+.navbar h2 {
+  color: #fff;  
+  margin-right: 30px;  
+  
+}
+
+.links {
+  display: flex;
+  gap: 25px;  
+ 
+}
+
+.links a {
+  text-decoration: none;  
+  color: #fff; 
+  padding: 10px 20px;  
+  background-color: hsl(234, 46%, 24%);  
+  border-radius: 10px;  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);  
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;  
+}
+
+.links a:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  /* Darker shadow on hover */
+}
+
+
+
+/*body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*/

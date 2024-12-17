@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "6",
+      "title": "Networking Event Recap",
+      "body": "Had an incredible time at the networking event/party last night! So many great connections. #networking #events"
+    },
+    {
+      "id": "8",
+      "title": "10 Years in Business",
+      "body": "Celebrating a milestone today! 10 years in business. Here’s to many more! #anniversary #businesssuccess"
+    },
+    {
+      "id": "9",
+      "title": "Conference Learning Experience",
+      "body": "Had a blast at the conference last weekend. Learned so much! #conference #learning #networking"
+    },
+    {
+      "id": "ad86",
+      "title": "Creating a Website",
+      "body": "I learned a lot today building a website with React and Axios! #Fun # Learning"
+    },
+    {
+      "id": "2380",
+      "title": "Monday Night!",
+      "body": "I just finished the assignment and am adding in some comments to mark the occasion!"
+    }
+  ]
+}
